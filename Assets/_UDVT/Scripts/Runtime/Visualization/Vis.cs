@@ -10,7 +10,9 @@ using UnityEngine;
 public enum VisType
 {
     Scatterplot,
-    NumberOfVisTypes
+    NumberOfVisTypes,
+    Histogram,
+    KDECalculation
 }
 
 /// <summary>
@@ -189,6 +191,8 @@ public class Vis
         if(visContainer != null) visContainer.MoveGridBasedOnViewingDirection();
     }
 
+
+
     //ToDo: Add your Vis to the switch statement
     /// <summary>
     /// Method returns the selected Visualization child class based on the defined types in the enum
@@ -202,6 +206,10 @@ public class Vis
             default:
             case VisType.Scatterplot:
                 return new VisScatterplot();
+            case VisType.Histogram:
+                return new VisHistogram(); //Adding VisHistogram.cs as a case too. //NewCode_Group3
+            case VisType.KDECalculation:
+                return new VisKDE(); //Adding VisKDE.cs as a case too. //NewCode_Group3
         }
     }
 

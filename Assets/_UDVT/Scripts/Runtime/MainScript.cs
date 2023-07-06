@@ -51,8 +51,8 @@ public class MainScript : MonoBehaviour
 
 
         //## 03: Visualize Dataset
-
-        vis = Vis.GetSpecificVisType(VisType.Scatterplot);
+        //NewCode_Group3
+        vis = Vis.GetSpecificVisType(VisType.KDECalculation); // Use VisHistogram.cs instead of VisScatterplot.cs
         vis.AppendData(dataSet);
         vis.CreateVis(this.gameObject);
     }

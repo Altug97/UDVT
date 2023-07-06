@@ -194,7 +194,8 @@ public class VisContainer
                     channel.position.y = (float)channelScale[setChannel.Key].GetScaledValue(setChannel.Value[valueIndex]);
                     break;
                 case VisChannel.ZPos:
-                    channel.position.z = (float)channelScale[setChannel.Key].GetScaledValue(setChannel.Value[valueIndex]);
+                    channel.position.z = 0;
+                    //channel.position.z = (float)channelScale[setChannel.Key].GetScaledValue(setChannel.Value[valueIndex]); //NewCode_Group3
                     break;
                 case VisChannel.XSize:
                     channel.size.x = (float)channelScale[setChannel.Key].GetScaledValue(setChannel.Value[valueIndex]);
@@ -203,7 +204,8 @@ public class VisContainer
                     channel.size.y = (float)channelScale[setChannel.Key].GetScaledValue(setChannel.Value[valueIndex]);
                     break;
                 case VisChannel.ZSize:
-                    channel.size.z = (float)channelScale[setChannel.Key].GetScaledValue(setChannel.Value[valueIndex]);
+                    //channel.size.z = (float)channelScale[setChannel.Key].GetScaledValue(setChannel.Value[valueIndex]); //NewCode_Group3
+                    channel.size.z = 0;
                     break;
                 case VisChannel.XRotation:
                     channel.rotation.x = (float)channelScale[setChannel.Key].GetScaledValue(setChannel.Value[valueIndex]);
@@ -212,7 +214,7 @@ public class VisContainer
                     channel.rotation.y = (float)channelScale[setChannel.Key].GetScaledValue(setChannel.Value[valueIndex]);
                     break;
                 case VisChannel.ZRotation:
-                    channel.rotation.z = (float)channelScale[setChannel.Key].GetScaledValue(setChannel.Value[valueIndex]);
+                    channel.rotation.z = 0; // (float)channelScale[setChannel.Key].GetScaledValue(setChannel.Value[valueIndex]);//NewCode_Group3
                     break;
                 case VisChannel.Color:
                     channel.color = ScaleColor.GetInterpolatedColor(setChannel.Value[valueIndex], setChannel.Value.Min(), setChannel.Value.Max(), colorScheme);

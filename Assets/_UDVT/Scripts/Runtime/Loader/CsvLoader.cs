@@ -107,6 +107,8 @@ public class CsvLoader : FileLoader
     public void PrintCsv()
     {
         string csvOutput = "";
+        List<double> dataAll = new List<double>();
+
 
         for (int rowIndex = 0; rowIndex < csvValues[0].Count; rowIndex++)
         {
@@ -114,13 +116,14 @@ public class CsvLoader : FileLoader
 
             for (int columnsIndex = 0; columnsIndex < csvValues.Count; columnsIndex++)
             {
+                dataAll.Add(1); 
                 csvOutput += csvValues[columnsIndex][rowIndex] + "\t | ";
             }
 
             csvOutput += " \n";
         }
 
-        Debug.Log("CSV Output [" + encoding + "]: \n" + csvOutput);
-    }
 
+    }
+    
 }
